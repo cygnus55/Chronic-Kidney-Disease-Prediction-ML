@@ -19,3 +19,9 @@ When above process didn't work, we followed following procedures:
 - After cleaning arff file, we import it using arff method of `scipy` library.
 - The imported data is then converted to pandas Dataframe.
 - We then proceed to clean the dataframe.
+
+### Cleaning procedures
+
+- The datatypes of some attributes were in byte strings. So, the datatype was recoded to string or float datatype which was appropriate.
+- Some values of attributes were `?`. Those were replaced by NaN.
+- 

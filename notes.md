@@ -24,4 +24,10 @@ When above process didn't work, we followed following procedures:
 
 - The datatypes of some attributes were in byte strings. So, the datatype was recoded to string or float datatype which was appropriate.
 - Some values of attributes were `?`. Those were replaced by NaN.
-- 
+
+### Load data for working on it
+
+- The data was loaded in the form of pandas dataframe and its shape and features were studied
+- The id column was dropped
+- The class attribute had all its values converted in numeric format
+- The column names were changed to more descriptive names

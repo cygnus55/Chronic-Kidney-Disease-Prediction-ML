@@ -31,3 +31,15 @@ When above process didn't work, we followed following procedures:
 - The id column was dropped
 - The class attribute had all its values converted in numeric format
 - The column names were changed to more descriptive names
+
+### Categorizing data
+
+- The data retrieved was categorized into numerical and non-numerical category
+
+### Feature Encoding
+
+- The string attribute value was encoded using LabelEncoder
+
+### Model Building
+
+- Data was divided into train and test data

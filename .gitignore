@@ -1,5 +1,7 @@
 .ipynb_checkpoints
 venv
 net_*
-*.py
 .virtual_documents
+.env
+.flaskenv
+__pycache__

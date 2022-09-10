@@ -1,14 +1,108 @@
+{% from "_formhelpers.html" import render_field %}
 <html>
   <head>
     <title>Chronic Kidney Disease Prediction</title>
-  </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> </head>
   <body>
     <h1>Chronic Kidney Prediction Disease</h1>
     <form>
        {{form.hidden_tag()}}
-      {#
-        FORM HERE!
-      #}
+      <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.age) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.bp) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.sg) }}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.al) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.su) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.rbc) }}
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.pus) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.bc) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.bgr) }}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.bu) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.sc) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.sod) }}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.pot) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.hemo) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.pc) }}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.wbc) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.rbcs) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.htn) }}
+        </div>
+      </div>
+     
+    
+      <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.dm) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.cad) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.apt) }}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.pe) }}
+        </div>
+        <div class="form-group col-lg-4">
+          {{ render_field(form.an) }}
+        </div>
+      </div>
+
+      <input class="btn btn-success" type="submit" value="Check">
     </form>
+    
   </body>
 </html>

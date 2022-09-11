@@ -1,11 +1,12 @@
 from wsgiref.validate import validator
 from flask_wtf import FlaskForm
 from wtforms import (StringField, PasswordField, IntegerField, SubmitField, SelectField, DateField,
-                    FileField, Label, TimeField, MultipleFileField, TextAreaField)
-from wtforms.validators import DataRequired, Email, EqualTo, ValidationError, Length,NumberRange
+                     FileField, Label, TimeField, MultipleFileField, TextAreaField)
+from wtforms.validators import DataRequired, Email, EqualTo, ValidationError, Length, NumberRange
 
 
 class SubmissionForm(FlaskForm):
+
     age=IntegerField('Age',validators=[DataRequired(),NumberRange(min=2,max=100)])
     bp=IntegerField('Blood Pressure(mm/Hg)',validators=[DataRequired()])
     sg = SelectField('Specific gravity', choices=[(1.005, '1.005'), (1.010, '1.010'),(1.015, '1.015'),(1.020, '1.020')], validators=[DataRequired()])

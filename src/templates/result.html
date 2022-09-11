@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> </head>
+  
+    <style>
+      .navbar{
+        height: 70px;
+      }
+      .card{
+        margin: 10% auto;
+        height: 200;
+        width:400;
+      }
+      
+    </style>
+    <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('index') }}">Chronic Kidney Prediction Disease</a>
+    </nav>
+    {% if final=='CKD' %}
+    <div class="card">
+        <h5 class="card-header">You are at risk having Kidney disease</h5>
+        <div class="card-body">
+          <h5 class="card-title">Please consult the doctor</h5>
+          <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Home</a>
+        </div>
+      </div>
+    {% else %}
+    <div class="card">
+        <h5 class="card-header">You seem to be healthy</h5>
+        <div class="card-body">
+          <h5 class="card-title">Enjoy your life</h5>
+          <a href="{{ url_for('index') }}" class="btn btn-primary">Back to home</a>
+        </div>
+      </div>
+    {% endif %}
+    </body>
+</html>

@@ -20,12 +20,13 @@
         margin-top: 5%;
       }
     </style>
+    </head>
     <body>
 
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Chronic Kidney Prediction Disease</a>
+      <a class="navbar-brand" href="{{ url_for('index') }}">Chronic Kidney Prediction Disease</a>
     </nav>
-    <form class="set">
+    <form class="set " method="POST" action="/result">
        {{form.hidden_tag()}}
       <div class="form-row">
         <div class="form-group col-lg-4 ">

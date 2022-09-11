@@ -4,12 +4,31 @@
     <title>Chronic Kidney Disease Prediction</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> </head>
-  <body>
-    <h1>Chronic Kidney Prediction Disease</h1>
-    <form>
+  
+    <style>
+      .navbar{
+        height: 70px;
+      }
+      .set{
+        margin-top: 3%;
+        margin-bottom: auto;
+        margin-left: 15%;
+        margin-right: 10%;
+      }
+      .test{
+        width:60%;
+        margin-top: 5%;
+      }
+    </style>
+    <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Chronic Kidney Prediction Disease</a>
+    </nav>
+    <form class="set">
        {{form.hidden_tag()}}
       <div class="form-row">
-        <div class="form-group col-lg-4">
+        <div class="form-group col-lg-4 ">
           {{ render_field(form.age) }}
         </div>
         <div class="form-group col-lg-4">
@@ -97,11 +116,28 @@
           {{ render_field(form.pe) }}
         </div>
         <div class="form-group col-lg-4">
+          {{ render_field(form.pcc) }}
+          
+        </div>
+       
+        <div class="form-group col-lg-4">
           {{ render_field(form.an) }}
         </div>
       </div>
+      <div class="form-row">
+        <div class="form-group col-lg-4">
+          
+        </div>
+        <div class="form-group col-lg-4">
+      <input class="btn btn-success test" type="submit" value="Check">
+          
+        </div>
+        <div class="form-group col-lg-4">
+          
+        </div>
+      </div>
 
-      <input class="btn btn-success" type="submit" value="Check">
+
     </form>
     
   </body>

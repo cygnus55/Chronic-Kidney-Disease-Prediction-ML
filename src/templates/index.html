@@ -3,31 +3,34 @@
   <head>
     <title>Chronic Kidney Disease Prediction</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> </head>
-  
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" /> 
     <style>
-      .navbar{
+      .navbar {
         height: 70px;
       }
-      .set{
+
+      .set {
         margin-top: 3%;
         margin-bottom: auto;
         margin-left: 15%;
         margin-right: 10%;
       }
-      .test{
+
+      .test {
         width:60%;
         margin-top: 5%;
       }
     </style>
-    </head>
-    <body>
+  </head>
 
+  <body>
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="{{ url_for('index') }}">Chronic Kidney Prediction Disease</a>
     </nav>
+
     <form class="set " method="POST" action="/result">
-       {{form.hidden_tag()}}
+      {{form.hidden_tag()}}
+
       <div class="form-row">
         <div class="form-group col-lg-4 ">
           {{ render_field(form.age) }}
@@ -51,95 +54,86 @@
           {{ render_field(form.rbc) }}
         </div>
       </div>
+
       <div class="form-row">
         <div class="form-group col-lg-4">
           {{ render_field(form.pus) }}
         </div>
         <div class="form-group col-lg-4">
-          {{ render_field(form.bc) }}
+          {{ render_field(form.pcc) }}
         </div>
         <div class="form-group col-lg-4">
-          {{ render_field(form.bgr) }}
+          {{ render_field(form.bc) }}
         </div>
       </div>
 
       <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.bgr) }}
+        </div>
         <div class="form-group col-lg-4">
           {{ render_field(form.bu) }}
         </div>
         <div class="form-group col-lg-4">
           {{ render_field(form.sc) }}
         </div>
-        <div class="form-group col-lg-4">
-          {{ render_field(form.sod) }}
-        </div>
       </div>
 
       <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.sod) }}
+        </div>
         <div class="form-group col-lg-4">
           {{ render_field(form.pot) }}
         </div>
         <div class="form-group col-lg-4">
           {{ render_field(form.hemo) }}
         </div>
-        <div class="form-group col-lg-4">
-          {{ render_field(form.pc) }}
-        </div>
       </div>
 
       <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.pc) }}
+        </div>
         <div class="form-group col-lg-4">
           {{ render_field(form.wbc) }}
         </div>
         <div class="form-group col-lg-4">
           {{ render_field(form.rbcs) }}
         </div>
+      </div>
+
+      <div class="form-row">
         <div class="form-group col-lg-4">
           {{ render_field(form.htn) }}
         </div>
-      </div>
-     
-    
-      <div class="form-row">
         <div class="form-group col-lg-4">
           {{ render_field(form.dm) }}
         </div>
         <div class="form-group col-lg-4">
           {{ render_field(form.cad) }}
         </div>
-        <div class="form-group col-lg-4">
-          {{ render_field(form.apt) }}
-        </div>
       </div>
 
       <div class="form-row">
+        <div class="form-group col-lg-4">
+          {{ render_field(form.apt) }}
+        </div>
         <div class="form-group col-lg-4">
           {{ render_field(form.pe) }}
         </div>
         <div class="form-group col-lg-4">
-          {{ render_field(form.pcc) }}
-          
-        </div>
-       
-        <div class="form-group col-lg-4">
           {{ render_field(form.an) }}
         </div>
       </div>
+
       <div class="form-row">
+        <div class="form-group col-lg-4"></div>
         <div class="form-group col-lg-4">
-          
+          <input class="btn btn-success test" type="submit" value="Check">
         </div>
-        <div class="form-group col-lg-4">
-      <input class="btn btn-success test" type="submit" value="Check">
-          
-        </div>
-        <div class="form-group col-lg-4">
-          
-        </div>
+        <div class="form-group col-lg-4"></div>
       </div>
-
-
     </form>
-    
   </body>
 </html>

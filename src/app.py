@@ -10,7 +10,7 @@ from forms import SubmissionForm
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
-with open("../models/dt_model.pkl", "rb") as f:
+with open("models/dt_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 
@@ -27,10 +27,7 @@ def result():
         del input_values['csrf_token']
         input_values = list(input_values.values())
         input_values = list(map(float, input_values))
-        print(input_values)
         final = 'No CKD' if model.predict([input_values])[0] else 'CKD'
-        print(final)
-        #print( f"{input_values} => {'No CKD' if model.predict([input_values])[0] else 'CKD'}")
 
     return render_template("result.html", final=final)
 

@@ -10,7 +10,7 @@ from forms import SubmissionForm
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
-with open("models/dt_model.pkl", "rb") as f:
+with open("models/rf_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 

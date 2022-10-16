@@ -22,6 +22,8 @@ def index():
 
 @app.route("/result", methods=["POST", "GET"])
 def result():
+    final = ""
+
     if request.method == 'POST':
         input_values = request.form.to_dict()
         del input_values['csrf_token']

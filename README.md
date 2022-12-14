@@ -15,7 +15,7 @@ Clone the repository (or download zipped version of the repository and extract i
 Locate requirements.txt file in the base directory. Then run:
 
 ```bash
-pip3 -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
 ```
